@@ -1,0 +1,53 @@
+. {
+    margin: 0;
+    padding: 0px;
+}
+
+.flex-container {
+    display: flex;
+    padding: 20px;
+    border: 1px #999 solid;
+    background-color: #eee;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block1,
+.block2,
+.block3,
+.block4 {
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px red solid;
+    padding: 0px;
+    
+}
+
+.block1 {
+    height: 120px;
+}
+
+.block2 {
+    height: 100px;
+}
+
+.block3 {
+    height: 40px;
+}
+
+.block4 {
+    border-color: blue;
+    height: 200px
+}
+
+@media screen and (max-width: 640px) {
+    .flex-container {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .block4 {
+        order: -1;
+        margin-bottom: 20px;
+    }
+}
