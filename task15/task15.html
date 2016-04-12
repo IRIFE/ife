@@ -94,8 +94,8 @@
 
     function init() {
         var btn = document.getElementById("sort-btn");
-        // btn.onclick = btnHandle();
-        btn.addEventListener("click",btnHandle);
+        btn.onclick = btnHandle;//方法1  如果btnHandle()会出现不点击就触发的现象
+        // btn.addEventListener("click",btnHandle);//方法2
         // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
 
     }
