@@ -83,7 +83,7 @@ function render(data) {
        var text="<li>第"+(i+1)+"名："+data[i][0]+ "空气质量：<b>" + data[i][1] + "</b></li>";
        list.push(text);
     }
-    document.getElementById('resort').innerHTML = list.join("");
+    document.getElementById('resort').innerHTML = list.join("");  //连接
 }
 
 function btnHandle() {
@@ -96,7 +96,8 @@ function btnHandle() {
 function init() {
 
   // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
-  document.getElementById('sort-btn').onclick=btnHandle;
+  // document.getElementById('sort-btn').onclick=btnHandle;
+  document.getElementById('sort-btn').addEventListener("click",btnHandle);
 }
 
 init();
