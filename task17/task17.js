@@ -9,7 +9,7 @@ var aqiSourceData = {
 };
 */
 //默认变量值
-var days=90;//天数
+var days = 90; //天数
 // 以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
     var y = dat.getFullYear();
@@ -61,36 +61,41 @@ var chartwrap = document.getElementById("aqi-chart-wrap");
  */
 function renderChart() {
     chartwrap.innerHTML = "";
-    var charLength=Object.keys(chartData).length;
+    var charLength = Object.keys(chartData).length;
     for (var item in chartData) {
+        //console.log(item);
         var colume = document.createElement("div");
+
         // alert(colume.nodeName);
         chartwrap.appendChild(colume);
         colume.className = "bar";
         var height = chartData[item];
+        colume.setAttribute("title",item+"  AQI:"+height)
         var containerWidth = chartwrap.offsetWidth;
-        var containerHeight=chartwrap.offsetHeight;
-        colume.style.width = containerWidth /charLength ;
-        var proHeight=height*charLength/days;// 按比例的高度
-        colume.style.height =proHeight ;
+        var containerHeight = chartwrap.offsetHeight;
+        colume.style.width = containerWidth / charLength;
+        colume.style.height = height;
 
-        switch (true) {//按空气质量上色
-            case proHeight < 50:
+        switch (true) { //按空气质量上色
+            case height < 50:
                 colume.style.backgroundColor = "green";
                 break;
-            case proHeight < 150:
+            case height < 150:
                 colume.style.backgroundColor = "blue";
                 break;
-            case proHeight < 250:
+            case height < 250:
                 colume.style.backgroundColor = "purple";
                 break;
-            case proHeight < 350:
+            case height < 350:
                 colume.style.backgroundColor = "red";
                 break;
             default:
                 colume.style.backgroundColor = "black";
         }
     }
+}
+function floatWindow(){
+
 }
 /**
  * 日、周、月的radio事件点击时的处理函数
@@ -156,9 +161,13 @@ function initAqiChartData() {
     // 调用图表渲染函数
     renderChart();
 }
+
 function restructSourceData(nowSelectCity, type) {
     var sourceData = {};
+    //var length = Object.keys(aqiSourceData[nowSelectCity]).length;
     var flag = 0,
+        dayCounter = 0,
+        index = 0,
         sum = 0; //记录周号
     for (var formatDate in aqiSourceData[nowSelectCity]) {
         //date format 2016-01-01
@@ -167,19 +176,33 @@ function restructSourceData(nowSelectCity, type) {
         var day = date.getDay();
         var month = date.getMonth();
         if (type == "week") {
-            if (day < 6) {
+            if (day < 6 && index < days - 2) {
                 sum += parseInt(aqiSourceData[nowSelectCity][formatDate]);
+                dayCounter++;
             } else {
-                sourceData["第" + (flag + 1) + "周"] = sum + parseInt(aqiSourceData[nowSelectCity][formatDate]);
+                sourceData["第" + (flag + 1) + "周平均"] =Math.floor( (sum + parseInt(aqiSourceData[nowSelectCity][formatDate])) / dayCounter);
                 sum = 0;
+                dayCounter = 0;
                 flag++;
             }
-        } 
+        }
         if (type == "month") {
-            if(sourceData["第" + month + "月"]==undefined)
-              sourceData["第" + month + "月"]=0;
-            sourceData["第" + month + "月"] += parseInt(aqiSourceData[nowSelectCity][formatDate]); 
-        } 
+            if (index == days - 2 && sourceData["第" + month + "月平均"] != undefined) {
+                sourceData["第" + month + "月平均"] = Math.floor((sum + parseInt(aqiSourceData[nowSelectCity][formatDate])) / dayCounter);
+            }
+            if ((sourceData["第" + month + "月平均"] == undefined) && sourceData["第" + (month - 1) + "月平均"] != undefined) {
+                sourceData["第" + (month - 1) + "月平均"] = Math.floor(sum / dayCounter);
+
+            }
+            if (sourceData["第" + month + "月平均"] == undefined) {
+                sourceData["第" + month + "月平均"] = 0;
+                sum = 0;
+                dayCounter = 0;
+            }
+            sum += parseInt(aqiSourceData[nowSelectCity][formatDate]);
+            dayCounter++;
+        }
+        index++;
     }
     return sourceData;
 }

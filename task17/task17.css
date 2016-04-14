@@ -1,5 +1,5 @@
 #aqi-chart-wrap {
-	height: 80%;
+	height: 600px;
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -10,7 +10,7 @@
 }
 
 .bar {
-	margin: 5px;
+	margin: 2px;
 	/*width: auto;*/
 
 }
