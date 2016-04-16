@@ -16,7 +16,7 @@ function rightin() {
 }
 
 function leftout() {
-    if (wrap.childNodes.length == 1) {
+    if (wrap.childNodes.length == 0) {
         alert("there is no member yet!");
         return;
     }
