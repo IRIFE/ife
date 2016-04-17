@@ -74,7 +74,7 @@ function createMembs(strArray) {
     var newNodes = new Array();
     for (var i = 0, len = strArray.length; i < len; i++) {
         if (strArray[i] == "") {
-            return;
+            return newNodes;
         }
         var newNode = document.createElement("div");
         newNode.className = "block";
