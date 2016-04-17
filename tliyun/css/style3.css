@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding:0;
+}
+#container{
+	margin:10px;
+	padding: 10px; 
+}
+#mainbody{
+	height: 680px;
+	background-color:#eee;
+	border: #999 solid 1px; 
+}
+.image{
+	width: 80px;
+	height: 80px;
+	margin: 20px;
+}
+#left{
+	position: absolute;
+	left:20px;
+	border: #999 solid 1px; 
+	margin:20px;
+	width: 200px;
+	background-color:white; 
+}
+#middle{
+	position: absolute;
+	left:240px;
+	right:160px;
+	margin: 20px;
+	width: auto;
+	border: #999 solid 1px; 
+	background-color:white; 
+}
+#right{
+	position: absolute;
+	right:20px;
+	width: 120px;
+	border: #999 solid 1px; 
+	margin:20px;
+	background-color:white; 
+}

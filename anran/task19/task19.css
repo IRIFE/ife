@@ -1,0 +1,24 @@
+#member_wrap {
+	border:1px solid gray;
+	height: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0px 20px 0px;
+    /*padding: 20px;*/
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bar {
+	margin: 2px;
+	background-color: red;
+	width: 10px;
+}
+.explain{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-family: "仿宋";
+	font-size: 1em;
+}

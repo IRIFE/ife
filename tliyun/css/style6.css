@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding:0;
+}
+
+body{
+	background-color: white;
+}
+
+#container{
+	width: 980px;
+	height: 1386px;
+	padding: 0 44px;
+	margin:0 auto;
+}
+
+#header{
+	width: 892px;
+	height: 61px;
+	margin:0 auto; 
+	border-bottom: 2px solid #938e8c;
+	position: relative;
+}
+
+#logo{
+	width: 110px;
+	height: 61px;
+	background-color: #EE6A50;
+	position:relative;
+}
+
+#logo div{
+	display: inline;
+	margin-bottom: 0px;
+	color:#ffffff;
+	font-family: "黑体";
+	font-size: 12px;
+}
+
+#ife{
+	position:absolute;  /*相对于父元素logo布局*/
+	top: 44px;
+	left:0; 
+}
+
+#date{
+    float: right;
+	position: absolute;
+	top: 44px;
+	right: 0;
+	font-size: 12px;
+	color: #d45d5c;
+	font-family: "黑体";
+}
+
+#head{
+	height: 330px;
+	width: 980px;
+	margin-top: 30px;
+}
+
+#headleft{
+	width: 641px;
+	height: 301px;
+	float: left;
+	position: relative;
+}
+
+#headright{
+	width: 203px;
+	border-top: solid 2px #cc8901;
+	float: right;
+	height: 299px;
+}
+
+#headtext1{
+    font-size:24px;
+    color: #000000;
+    font-family:"微软雅黑"；
+    line-height: 40px;
+    text-decoration: underline;
+}
+
+#headtext1 span{
+	font-size: 40px;
+}
+
+#headtext2{
+    font-size: 12px;
+    color: #676767;
+    font-family: "楷体"；
+    line-height: 10px;
+}
+
+#headtext3{
+    font-size: 116px;
+    color: #75b86b;
+    font-family: "微软雅黑"；
+    text-decoration: underline;
+}
+#headtext4{
+	font-size: 55px;
+	color: #cc8901;
+	font-family: "微软雅黑";
+}
+#headtext5{
+	font-size: 21px;
+	color: #cc8901;
+	font-family: "微软雅黑";
+}
+#headtext6{
+	font-size: 12px;
+	color: #cc8901;
+	font-family: "微软雅黑";
+}
+
+#middle{
+    width: 641px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+#middle1{
+	width: 35%;
+	float: left;
+	padding-right: 10px;
+}
+#middle2{
+	width: 30%;
+	float: left;
+	padding-right: 20px;
+}
+#middle3{
+	width: 30%;
+	float: left;
+}
+#text1{
+    font-size: 12px;
+    color: #767777;
+    font-family: "宋体";
+    line-height: 16px;
+}
+#text2{
+    font-size: 12px;
+    color: #121815;
+    font-family: "微软雅黑";
+    line-height: 16px;
+    opacity: 70%;
+}
+#text3{
+    font-size: 12px;
+    color: #121815;
+    font-family: "微软雅黑";
+    line-height: 16px;
+    opacity: 70%;
+}
+.text4{
+	font-size: 12px;
+    color: #cd4a48;
+    font-family: "微软雅黑";
+    line-height: 16px;
+    opacity: 70%;
+}

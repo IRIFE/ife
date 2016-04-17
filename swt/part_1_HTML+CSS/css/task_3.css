@@ -1,0 +1,49 @@
+*{
+	margin:0; 
+}
+div#container{
+	position: absolute;
+	margin: 20px;
+	border: 1px solid #999;
+	padding: 20px;
+	background-color: #eee;
+}
+div#teamname{
+	float: left;
+	width: 200px;
+	border: 1px solid #999;
+	padding: 20px;
+	background-color: white;
+}
+div#teamname p{
+	float: right;
+}
+div#members{
+	float: right;
+	width: 120px;
+	border: 1px solid #999;
+	background-color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div#members img{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+div#instruction{
+	margin-left: 260px;
+	margin-right: 140px;
+	border: 1px solid #999;
+	padding: 20px;
+	background-color: white;
+	text-overflow: ellipsis;
+}
+div#instruction p{
+	text-indent: 2em;
+	line-height: 200%;
+	text-align: justify;
+	word-wrap: break-word;
+}
+

@@ -1,0 +1,14 @@
+#aqi-chart-wrap{
+	height: 550px;
+	width:95%;
+	padding:20px;
+	margin:0 auto;
+	display:flex; /*单行显示*/
+	flex-flow: row nowrap;  /*从左往右单行显示*/
+	align-items: flex-end;  
+	/*伸缩项目在侧轴终点边的外边距 靠住该行在侧轴终点的边*/
+	justify-content: center;  /*主轴线沿中间对齐*/
+}
+.bar{
+	margin:2px;
+}

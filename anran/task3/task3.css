@@ -1,0 +1,53 @@
+#teamPro{
+	height: auto;
+    width: auto;
+	padding: 20px;
+	background-color: #eee;
+	border: solid #999 1px;
+	overflow: hidden;
+}
+#teamPic{
+	float: left;
+	width: 198px;	
+	height: 120px;
+	/*height: 120px;*/
+	/*padding: 20px;*/
+	border: solid #999 1px;
+	background-color: white;
+}
+#teamIntro {
+	/* width: auto; */
+	height: auto;
+	border: solid #999 1px;
+	background-color: white;
+	position: absolute;
+	left: 250px;
+	right: 170px;
+}
+#membPic{
+	float: right;
+	width: 118px;
+	border: solid #999 1px;
+	background-color: white;
+}
+.content{
+	margin: 20px;
+	clear: both;
+}
+.portrait{
+	height: 80px;
+	width: 80px;
+}
+.picUl{
+
+	position: relative;
+	left: -20px;
+}
+.picList{
+	list-style-type: none;
+	margin-bottom: 15px;
+}
+p{
+	text-indent: 2em;
+	line-height: 1.5em;
+}

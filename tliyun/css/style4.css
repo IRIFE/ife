@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding: 0;
+}
+#content{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin:-100px 0 0 -200px;
+    background-color: #ccc; 
+    overflow: hidden;
+}
+#sector1{
+    height: 100px;
+    width: 100px;
+    background: #fc0;
+    border-radius: 50px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+#sector2{
+    height: 100px;
+    width: 100px;
+    background: #fc0;
+    border-radius: 50px;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 350px;
+}
