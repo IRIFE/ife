@@ -5,7 +5,7 @@ var show=document.getElementById('display').childNodes;
 function getData(){
     var data=document.getElementById('input').value;  //输入的文本
     var str = data.trim(); 
-    var arrWord = str.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/);
+    var arrWord = str.split(/[^0-9a-zA-Z\u4e00-\u9fa5]+/);  //分割
     var len=arrWord.length;
     for(var i=0;i<len;i++){
         list.push(arrWord[i]);
@@ -63,27 +63,27 @@ Array.prototype.remove = function(val) {
     }
 };
 
+function doReplace(temp,search){
+    var index=temp.indexOf(search);
+    if(index>-1){
+        var remain=temp.substring(index+search.length); 
+        temp=temp.substring(0,index)+"<span style='color:blue'><b>"+search+"</b></span>"+doReplace(remain,search);
+    }
+    return temp;      
+}
+
 function search(){
     var search=document.getElementById('search').value;  //输入的搜索词
-    for (var i = 0; i < list.length; i++) {
-        var index=list[i].indexOf(search);
-        // alert(index);
-        if(index>-1){
-            var newData=list[i].substring(0,index)+"<span style='color:blue'><b>"+search+"</b></span>"+list[i].substring(index+search.length);
-            alert(newData);
-            list[i]=newData;
-        }
+    for (var i = 0; i <list.length; i++) {
+        list[i]=doReplace(list[i],search);
     }
     renderList(list);
 }
 
 function init(){
 	renderList(list);
-	//以下绑定事件，对应四种操作
-	// document.getElementById('left-in').addEventListener("click",leftAdd);
+    //绑定添加元素的事件
 	document.getElementById('right-in').addEventListener("click",rightAdd);
-	// document.getElementById('left-out').addEventListener("click",leftDelete);
-	// document.getElementById('right-out').addEventListener("click",rightDelete);
 	//点击某元素，将它删除	
     bindClick(show);
     //绑定搜索事件
