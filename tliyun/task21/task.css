@@ -1,0 +1,28 @@
+ 
+#tag{
+	width:300px;
+}
+
+ .box1{
+ 	background-color: #87CEFF;
+ 	padding:10px;
+ 	margin:10px;
+ 	font-size: 25px;
+ 	color: white;
+ }
+
+ #display1{
+    height:100px;
+    margin:20px;
+ }
+
+ #display2{
+ 	height:100px;
+ 	margin:20px;
+ }
+
+ #input{
+ 	height: 200px;
+ 	width: 300px;
+ }
+
