@@ -1,0 +1,19 @@
+.block {
+    background-color: red;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+#member_wrap .block span {
+    background-color: yellow;
+    color: blue;
+}
