@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding:0;
+}
+
+span{
+	font-size:28px; 
+	vertical-align:middle;
+}
+
+#content{
+	padding: 40px;
+	margin:30px;
+}
+
+#input{
+	margin-left: 20px;
+	height: 30px;
+	width: 300px;
+}
+
+button{
+	padding:10px;
+	background-color: #1C86EE;
+	color: white;
+}
+
+#hint{
+	color: gray;
+	font-size: 15px;
+	margin-left: 80px;
+	margin-top: 10px;
+}
