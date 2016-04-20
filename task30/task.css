@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding:0;
+}
+
+.left{
+	width: 150px;
+	font-size:28px; 
+	vertical-align:middle;
+	text-align: right;
+	float: left;
+}
+
+#content{
+	padding: 40px;
+	margin:30px;
+	width: 600px;
+}
+
+input{
+	margin-left: 20px;
+	height: 30px;
+	width: 300px;
+	clear: both;
+}
+
+button{
+	padding:10px;
+	background-color: #1C86EE;
+	color: white;
+	float: right;
+}
+
+#submit{
+	margin-right: 125px;
+}
+
+.hint{
+	font-size: 15px;
+	margin-left: 180px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}

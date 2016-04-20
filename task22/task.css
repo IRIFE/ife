@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding:0;
+}
+
+div{
+	border: 1px solid black;
+	padding:10px;
+	margin: 10px;
+	display: flex;
+	flex-flow: row nowrap;
+	text-align: center;
+}
+
+.root{
+	width: 600px;
+	height: 150px;
+}
+
+.father{
+    width: 250px;
+    margin-left: 15px;
+}
+
+.son{
+    width: 80px;
+    margin-left: 13px;
+}
+
+.grandson{
+    width: 10px;
+    margin-left: 8px;
+}
+
+button{
+	margin: 20px 30px;
+	padding:5px;
+}

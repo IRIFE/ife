@@ -29,7 +29,7 @@ function insertHobby(){
     }
     var list3=[];
     for(var j=0;j<list2.length;j++){
-        if(list3.indexOf(list2[j])===-1){
+        if(list3.indexOf(list2[j])===-1 && list2[j]!==""){
             list3.push(list2[j]);
         }
     }
