@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面三十一</title>
+	<link rel="stylesheet" type="text/css" href="task.css">
+</head>
+<body>
+    <div id="wrap">    
+		<div id="select">
+			<input type="radio" id="student" name="check" checked="checked">
+	        <label for="student" style="margin-right:100px">在校生</label>
+		    
+			<input type="radio" id="other" name="check">
+			<label for="other">非在校生</label>
+		</div>
+
+	    <div id="display">
+	    	<div id="college-list">
+	    		<span>学校</span><select id="city-select" style="margin-right: 80px;">
+					<option id="beijing">北京</option>
+					<option id="shanghai">上海</option>
+					<option id="tianjin">天津</option>
+				</select>
+				<select id="college-select">
+					<option>北京大学</option>
+					<option>清华大学</option>
+					<option>北京航空航天大学</option>
+				</select>
+			</div>
+
+			<div id="company-list" style="display: none;">  <!--默认隐藏-->
+				<span>就业单位</span><select id="city-select">
+					<!-- 显示数据 -->
+					<option>百度</option>
+					<option>阿里巴巴</option>
+					<option>腾讯</option>
+				</select>
+			</div>
+	    </div>
+    </div>
+
+	<script type="text/javascript" src="task.js"></script>
+	
+</body>
+</html>
