@@ -6,14 +6,16 @@ aqiData = [];
 
 function leftin(){	
 	var str = text_area.value.trim();
-	var arrWord = str.split(" ");
+	// var arrWord = str.split(" ");
+	var arrWord = str.split(/[^[0-9A-Za-z\u4E00-\u9FA5]+/);
 	aqiData = arrWord.concat(aqiData);
 	
 	render();
 }
 function rightin(){	
 	var str = text_area.value.trim();
-	var arrWord = str.split(" ");
+	// var arrWord = str.split(" ");
+	var arrWord = str.split(/[^[0-9A-Za-z\u4E00-\u9FA5]+/);
 	aqiData = aqiData.concat(arrWord);
 	
 	render();
