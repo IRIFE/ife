@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务二十：基础JavaScript练习（三）</title>
+	<style type="text/css">
+		#box-wrap{
+			display: flex;
+			flex-flow: row wrap;
+		}
+		#box-wrap div{
+			height:40px;
+			/*width:50px;*/
+			width: auto;
+			padding: 20px;
+			background-color:#FF69B4;
+			line-height:40px;
+			text-align:center;
+			color:#ffffff;
+			margin:5px;
+		}
+	</style>
+</head>
+<body>
+	<textarea id="input" placeholder="可输入多个数,以空格分开"></textarea>
+	<button id="leftin">左侧入</button>
+	<button id="rightin">右侧入</button>
+	<button id="leftout">左侧出</button>
+	<button id="rightout">右侧出</button>
+	<button id="search">查询</button>
+	<input id="searh_content"></input>
+	<div id="box-wrap"></div>
+	<script type="text/javascript" src="task_20.js"></script>
+</body>
+</html>

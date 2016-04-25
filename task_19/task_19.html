@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务十九：基础JavaScript练习（二）</title>
+	<style type="text/css">
+	#box-wrap{
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-end;
+		height: 350px;
+	}
+	#box-wrap div{
+		height: 50px;
+		width: 15px;
+		margin: 2px;
+		background-color: red;
+	}
+	</style>
+</head>
+
+<body>
+	<fieldset>
+		<legend>表单输入</legend>
+		<label><input id="textInput" placeholder="输入10~100内的数"></input></label>
+		<label><button id="leftin">左侧入</button></label>
+		<label><button id="rightin">右侧入</button></label>
+		<label><button id="leftout">左侧出</button></label>
+		<label><button id="rightout">右侧出</button></label>
+		<label><button id="initdata">随机产生</button></label>
+		<label><button id="sortdata">排序</button></label>
+		<label>
+			间隔(ms)
+			<select id="ms">
+				<option>50</option>
+				<option>100</option>
+				<option>200</option>
+				<option>500</option>
+			</select>
+		</label>
+	</fieldset>
+	<div id="box-wrap">
+		
+	</div>
+	<script type="text/javascript" src="task_19.js"></script>
+</body>
+</html>

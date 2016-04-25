@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务二十一：基础JavaScript练习（四）</title>
+	<style type="text/css">
+	#tagChart,#hobbyChart{
+		margin: 20px 0px;
+		text-align: center;
+		padding: 5px;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	#tagChart div,#hobbyChart div{
+		height:40px;
+		width: auto;
+		padding: 20px;
+		background-color:#FF69B4;
+		line-height:40px;
+		text-align:center;
+		color:#ffffff;
+		margin:5px;
+	}
+	#tag{
+		width: 150px;
+	}
+	</style>
+</head>
+
+<body>
+<div>Tag: <input id="tag" placeholder="以空格，逗号，回车结束"></input></div>
+<div id="tagChart"></div>
+
+<textarea id="hobby" placeholder="可输入多个爱好，以特殊符号隔开！"></textarea><br />
+<input type="button" value="确认兴趣爱好" id="hobby_btn"></input>
+<div id="hobbyChart"></div>
+
+<script type="text/javascript" src="task_21.js"></script>
+</body>
+</html>
