@@ -1,5 +1,6 @@
 var preBtn = document.getElementById("pre");
 var postBtn = document.getElementById("post");
+document.getElementById("input").value = "";
 
 var searchText;
 var timer;
@@ -51,7 +52,7 @@ function startSearch(type){
 	for(var j=0; j<spans.length; j++){
 		spans[j].style.color = "black";
 	}// 清除上次的查询结果
-
+	
 	searchText = document.getElementById("input").value;
 	var i = 0;
 	array = [];
@@ -64,6 +65,13 @@ function startSearch(type){
 	timer = setInterval(function(){
 		initRender();
 		render(i);
+
+		var index = array[i].div.children[0].innerHTML.indexOf(searchText);
+		var content = array[i].div.children[0].innerHTML;
+		if(index != -1){
+			array[i].div.children[0].innerHTML = content.substring(0,index)+"<span class='highLight'>"+searchText+"</span>"+content.substring(index+searchText.length,content.length);
+		}//查询结果的效果显示
+
 		i++;
 		if(i==array.length){
 			array[i].div.style.backgroundColor = "blue"; 
@@ -74,9 +82,6 @@ function startSearch(type){
 }
 function render(i){
 	array[i].div.style.backgroundColor = "blue"; 
-	if(searchText == array[i].div.children[0].innerHTML){
-		array[i].div.children[0].style.color = "red";
-	}
 }
 function initRender(){
 	for(var i = 0; i<array.length; i++){
