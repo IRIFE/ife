@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务二十四：JavaScript和树（三）</title>
+	<style type="text/css">
+		body{text-align: center;}
+		#treeBox{
+			height: 300px;
+			border: 1px solid black;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
+			align-items: center;
+			margin: 20px 50px;
+		}
+		#treeBox div{
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-around;
+			align-items: center;
+		}
+		span.highLight{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>多叉树的遍历</h1>
+	<div id="treeBox">
+		<span>apple</span>
+		<div>
+			<span>book</span>
+			<div>
+				<span>phone</span>
+			</div>
+			<div>
+				<span>ball</span>
+			</div>
+			<div>
+				<span>pen</span>
+				<div>
+					<span>note</span>
+				</div>
+			</div>
+		</div>
+		<div>
+			<span>button</span>
+			<div>
+				<span>tea</span>
+				<div>
+					<span>sports</span>
+					<div>
+						<span>school</span>
+					</div>
+				</div>
+				<div>
+					<span>music</span>
+				</div>
+			</div>
+			<div>
+				<span>student</span>
+			</div>
+		</div>
+		<div>
+			<span>pear</span>
+			<div>
+				<span>watch</span>
+			</div>
+			<div>
+				<span>fish</span>
+			</div>
+		</div>
+	</div>
+	<input id="input" placeholder="输入查询内容"></input>
+	<input type="button" id="pre" value="先序遍历查询"></input>
+	<input type="button" id="post" value="后序遍历查询"></input><br /><br />
+	<input type="button" id="delBtn" value="删除选中节点及其子节点"></input><br /><br />
+	<input id="addValue" placeholder="新节点内容"></input>
+	<input type="button" id="addBtn" value="在选中节点中加入"></input>
+
+	<script type="text/javascript" src="task_24.js"></script>
+</body>
+</html>
