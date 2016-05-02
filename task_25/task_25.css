@@ -1,0 +1,12 @@
+.hide{
+	display: none;
+}
+ul#root_ul{
+	display: block;
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+a{
+	/*color: blue;*/
+	text-decoration: none;
+}

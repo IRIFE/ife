@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务二十五：JavaScript和树（四）</title>
+	<link rel="stylesheet" type="text/css" href="task_25.css">
+</head>
+<body>
+	<h1>树形组件</h1>
+	<input id="searchInput" placeholder="输入查询内容"></input>
+	<input id="preBtn" type="button" value="先序遍历查找"></input>
+	<input id="postBtn" type="button" value="后序遍历查找"></input>
+	<ul id="root_ul">
+		<li id="root">总分类<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>
+			<ul>
+				<li>食品<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>
+					<ul>
+						<li>零食<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>
+							<ul>
+								<li>巧克力<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+								<li>坚果<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+								<li>饼干<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+							</ul>
+						</li>
+						<li>饮料<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+						<li>水果<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+						<li>生鲜<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+					</ul>
+				</li>
+				<li>服装<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>
+					<ul>
+						<li>上衣<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+						<li>裤子<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+						<li>裙子<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+					</ul>
+				</li>
+				<li>文具<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>
+					<ul>
+						<li>笔<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+						<li>本<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>
+					</ul>
+				</li>
+				<li>电子产品<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a></li>	
+			</ul>
+		</li>
+	</ul>
+<!-- 	<input id="addInput" placeholder="输入添加的内容"></input>
+	<input id="addBtn" type="button" value="添加"></input>
+	<input id="delBtn" type="button" value="删除"></input> -->
+<script type="text/javascript" src="task_25.js"></script>
+</body>
+</html>
