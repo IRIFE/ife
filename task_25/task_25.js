@@ -3,11 +3,6 @@ input.value = "";
 var preBtn = document.getElementById("preBtn");
 var postBtn = document.getElementById("postBtn");
 
-// var addBtn = document.getElementById("addBtn");
-// var delBtn = document.getElementById("delBtn");
-// var addInput = document.getElementById("addInput");
-// addInput.value = "";
-
 var timer;
 var array = [];
 var targetNode;
@@ -140,14 +135,18 @@ function initHandle(){
 		}
 	
 		lists[i].onmouseover=function(e){
-			// targetNode = this;
 			initRender();
-			this.style.color = "blue";
+			if(this.style.color != "red")
+			{	
+				this.style.color = "blue";
+			}
 			if ( this.children.length!= 2) {
 				var ul = this.children[2];	
 			 	for(var j=0; j<ul.children.length; j++)
 				{
-			 		ul.children[j].style.color = "black";
+					if(ul.children[j].style.color!="red"){	
+			 			ul.children[j].style.color = "black";
+					}
 			 	}
 			}
 			
@@ -160,7 +159,10 @@ function initHandle(){
 		}
 		lists[i].onmouseout=function(e){
 			initRender();
-			this.style.color = "black";
+			if(this.style.color != "red")
+			{	
+				this.style.color = "black";
+			}
 			var a = this.getElementsByTagName("a");
 			for(var j=0; j<a.length; j++){
 				a[j].className = "hide";
@@ -178,7 +180,6 @@ function initHandle(){
 			else{
 				var li = document.createElement("li");
 				li.innerHTML =  addValue + '<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>';
-				// targetNode.parentNode.children[2].appendChild(li);
 				var ul = targetNode.parentNode.children[2];
 				if(ul.className=="")
 				{
@@ -205,23 +206,6 @@ function initHandle(){
 	}
 }
 
-// function add(){
-// 	// alert("+");
-// 	var addValue = prompt("请输入添加的内容：","");
-// 	if(addValue ==null || addValue == ""){return;}
-// 	else{
-// 		var li = document.createElement("li");
-// 		li.innerHTML =  addValue + '<a href="javascript:;" class="add hide">	+</a><a href="javascript:;" class="del hide">	-</a>'
-// 		targetNode.children[2].appendChild(li);
-// 		initHandle();
-// 		buildTree();
-// 	}
-// }
-// function del(){
-// 	// alert("-");
-// 	targetNode.parentNode.removeChild(targetNode);	
-// 	buildTree();//删除节点后重新建树
-// }
 /*
 *	初始化
 */
