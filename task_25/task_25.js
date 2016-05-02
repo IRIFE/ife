@@ -54,6 +54,7 @@ function postOrder(parent){
 
 function search(type){
 	clearInterval(timer);
+	clearHideLi();
 	initRender();
 	initFontColor();
 
@@ -93,6 +94,16 @@ function search(type){
 			clearInterval(timer);
 		}
 	},500);
+}
+function clearHideLi(){
+	var hides = document.getElementsByClassName("hide");
+	for(var i=0; i<hides.length; i++){
+		hides[i].className = "";
+	}
+	var a = document.getElementsByTagName("a");
+	for (var i = 0; i < a.length; i++) {
+		a[i].className = "hide";
+	}
 }
 function render(i){
 	
