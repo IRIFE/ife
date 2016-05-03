@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务三十：表单（二）多个表单项的动态校验</title>
+	<style type="text/css">
+	.hint{
+		font-size: 12px;
+		color: #ccc;
+		text-align: left;
+	}
+	.hide{
+		display: none;
+	}
+	td{
+		text-align: right;
+	}
+	</style>
+</head>
+<body>
+<table>
+	<tr>
+		<td>名称</td>
+		<td><input id="name"></input></td>
+		<td class="hint hide">必填，长度为4~16个字符</td>
+	</tr>
+	<tr>
+		<td>密码</td>
+		<td><input id="password"></input></td>
+		<td class="hint hide">必填，以字母开头，长度在6~20之间,只能包括字符、数字和下划线</td>
+	</tr>
+	<tr>
+		<td>密码确认</td>
+		<td><input id="re_password"></input></td>
+		<td class="hint hide">再次输入相同密码</td>
+	</tr>
+	<tr>
+		<td>邮箱</td>
+		<td><input id="email"></input></td>
+		<td class="hint hide">必填</td>
+	</tr>
+	<tr>
+		<td>手机</td>
+		<td><input id="phoneNum"></input></td>
+		<td class="hint hide">必填</td>
+	</tr>
+	<tr>
+		<td colspan="2"><input id="submit" type="button" value="提交"></input></td>
+	</tr>
+</table>
+	
+<script type="text/javascript" src="task_30.js"></script>
+</body>
+</html>
