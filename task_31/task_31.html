@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务三十一：表单（三）联动</title>
+	<style type="text/css">
+		form{
+			text-align: center;
+			margin: 20px;
+		}
+
+		div{
+			text-align: center;
+		}
+		#city{
+			width: 100px;
+		}
+		#university{
+			width: 200px;
+		}
+		#for_notstudent input{
+			width: 200px;
+		}
+		.hide{display: none;}
+	</style>
+</head>
+<body>
+	<form id="selectIdentify">
+		<input id="student" type="radio" name="identify" checked="checked">在校生</input>
+		<input id="notstudent" type="radio" name="identify">非在校生</input>
+	</form>
+	
+	<div id="for_student">
+		学校：
+		<select id="city">
+			<option selected="selected">北京</option>
+			<option>辽宁</option>
+			<option>上海</option>	
+		</select>
+		<select id="university">
+			<option>北京大学</option>
+			<option>北京航空航天大学</option>
+			<option>北京交通大学</option>
+			<option>北京理工大学</option>
+			<option>清华大学</option>
+		</select>
+	</div>
+
+	<div id="for_notstudent" class="hide">
+		就业单位：<input></input>
+	</div>
+<script type="text/javascript" src="task_31.js"></script>
+</body>
+</html>
