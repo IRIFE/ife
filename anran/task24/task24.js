@@ -1,4 +1,5 @@
 var wrap = document.getElementById("wrap");
+var oriWrap=wrap.innerHTML;
 var proVisitBtn = document.getElementById("proVisit");
 var posVisitBtn = document.getElementById("posVisit");
 var queryBtn = document.getElementById("queryBtn");
@@ -11,8 +12,8 @@ var timer;
 var query;
 var target;
 
-function getAllDiv() {
-    return document.getElementsByTagName("div");
+function getAll(tagName) {
+    return document.getElementsByTagName(tagName);
 }
 
 
@@ -30,7 +31,7 @@ function deleteDiv() {
         return;
     }
     target.parentNode.removeChild(target);
-    treeRoot= createTree(wrap);
+    treeBuilder(wrap);
 }
 
 function addDiv() {
@@ -42,7 +43,7 @@ function addDiv() {
     var newDiv = document.createElement("div");
     newDiv.innerHTML = "<span>" + value + "</span>";
     target.appendChild(newDiv);
-   treeRoot= createTree(wrap);
+    treeBuilder(wrap);
 }
 
 function TreeNode(div) {
@@ -50,10 +51,8 @@ function TreeNode(div) {
     this.childTreeNode = [];
 }
 
-function createTree(div) {
-    var treeNode = new TreeNode(div);
-    treeNode.childTreeNode = getChildNodes(div);
-    return treeNode;
+function createTree(treeNode) {
+    treeNode.childTreeNode = getChildNodes(treeNode.div);
 }
 
 function getChildNodes(div) {
@@ -65,17 +64,27 @@ function getChildNodes(div) {
         len = nodes.length;
     for (; i < len; i++) {
         if (nodes[i].nodeName.toLowerCase() == "div") {
-            childTreeNode.push(createTree(nodes[i]));
+            var newTreeNode = new TreeNode(nodes[i]);
+            createTree(newTreeNode);
+            childTreeNode.push(newTreeNode);
         }
     }
     return childTreeNode;
 }
-
+function treeBuilder(){
+    treeRoot=new TreeNode(wrap);
+    createTree(treeRoot);
+}
 function startVisit(type) {
     query = document.getElementById("query").value;
+    if (query == "") {
+        alert("请输入查询");
+        return;
+    }
     //解决在动画未完成时的冲突
     clearInterval(timer);
     initRender();
+    treeBuilder();
     nodeArray = [];
     switch (type) {
         case "pro":
@@ -122,12 +131,25 @@ function postVisit(node) {
 }
 
 function initRender() {
-    var allDiv = getAllDiv();
+    var allDiv = getAll("div");
     var i = 0,
         len = allDiv.length;
     for (; i < len; i++)
         allDiv[i].style.backgroundColor = "white";
-    wrap.innerHTML.toString().replace('id="highLight"',"");
+
+    var allSpan=getAll("span");
+    var j=0,
+    len0=allSpan.length;
+    for(;j<len0;j++){
+        if(allSpan[j].className=="highLight"){
+            var content=allSpan[j].textContent;
+            newNode=document.createTextNode(content);
+            allSpan[j].parentNode.replaceChild(newNode,allSpan[j]);
+            j--;
+            len0--;
+        }
+    }
+    
 }
 
 function render(i) {
@@ -149,7 +171,7 @@ function highLight(content, query) {
     var index = content.indexOf(query);
     if (index != -1) {
         var FollowContent = content.substring(index + query.length);
-        content = content.substring(0, index) + "<span id='highLight'>" + query + "</span>" + highLight(FollowContent, query);
+        content = content.substring(0, index) + "<span class='highLight'>" + query + "</span>" + highLight(FollowContent, query);
     }
     return content;
 }
@@ -159,7 +181,7 @@ function bind() {
     posVisitBtn.addEventListener("click", function(e) { startVisit("pos"); });
     deleteBtn.addEventListener("click", deleteDiv);
     addBtn.addEventListener("click", addDiv);
-    var alldiv = getAllDiv();
+    var alldiv = getAll("div");
     var i = 0,
         len = alldiv.length;
     for (; i < len; i++)
@@ -169,7 +191,7 @@ function bind() {
 }
 
 function init() {
-    treeRoot=createTree(wrap);
+    // treeRoot = createTree(wrap);
     bind();
 }
 init();

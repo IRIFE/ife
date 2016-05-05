@@ -1,4 +1,5 @@
 var wrap = document.getElementById("wrap");
+var oriWrap=wrap.innerHTML;
 var proVisitBtn = document.getElementById("proVisit");
 var posVisitBtn = document.getElementById("posVisit");
 var queryBtn = document.getElementById("queryBtn");
@@ -9,7 +10,6 @@ var query;
 
 function TreeNode(div) {
     this.div = div;
-    // this.text = div.firstChild.textContent.trim();
     this.childTreeNode = [];
 }
 
@@ -36,9 +36,14 @@ function getChildNodes(div) {
 
 function startVisit(type) {
     query = document.getElementById("query").value;
+    if (query == "") {
+        alert("请输入查询");
+        return;
+    }
     //解决在动画未完成时的冲突
     clearInterval(timer);
     initRender();
+    treeBuilder();
     nodeArray = [];
     switch (type) {
         case "pro":
@@ -61,7 +66,7 @@ function startVisit(type) {
         }
         render(i);
         i++;
-    }, 500);
+    }, 200);
 }
 
 function proVisit(node) {
@@ -93,16 +98,17 @@ function initRender() {
         len = allDiv.length;
     for (; i < len; i++)
         allDiv[i].style.backgroundColor = "white";
+    wrap.innerHTML=oriWrap;
 }
 
 function render(i) {
     var currentDiv = nodeArray[i].div;
     currentDiv.style.backgroundColor = "blue";
-    var currentSpan=currentDiv.getElementsByTagName("span")[0];
+    var currentSpan = currentDiv.getElementsByTagName("span")[0];
     var text = currentSpan.innerHTML.trim();
     if (query != undefined) {
         // currentDiv.firstChild=document.createElement("span");
-       currentSpan.innerHTML = highLight(text, query);
+        currentSpan.innerHTML = highLight(text, query);
     }
     if (i > 0) {
         var lastDiv = nodeArray[i - 1].div;
@@ -114,7 +120,7 @@ function highLight(content, query) {
     var index = content.indexOf(query);
     if (index != -1) {
         var FollowContent = content.substring(index + query.length);
-        content = content.substring(0, index) + "<span id='highLight'>" + query + "</span>" + highLight(FollowContent, query);
+        content = content.substring(0, index) + "<span class='highLight'>" + query + "</span>" + highLight(FollowContent, query);
     }
     return content;
 }
@@ -124,9 +130,9 @@ function bind() {
     posVisitBtn.addEventListener("click", function(e) { startVisit("pos"); });
 }
 
-function init() {
+function treeBuilder() {
     treeRoot = new TreeNode(wrap);
     createTree(treeRoot);
-    bind();
 }
-init();
+
+bind();
