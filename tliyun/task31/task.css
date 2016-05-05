@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding:0;
+	font-size: 25px;
+}
+
+#wrap{
+	text-align: center;
+	width: 800px;
+}
+
+#select{
+	width: 500px;
+	text-align: center;
+	margin:0 auto;
+    margin-top: 50px;
+}
+
+#display{
+	width: 600px;
+	text-align: center;
+	margin:0 auto;
+}
+
+input{
+	/*设置单选按钮的大小*/
+	width: 20px;
+	height: 20px;
+}
+
+div{
+	margin-top:80px;
+}
+
+option{
+	width: 200px;
+}
+
+span{
+	margin-right: 30px;
+}
