@@ -1,11 +1,12 @@
 *{
 	padding: 0px;
 	margin: 0px;
+	font-size: 22px;
 }
 
 #panel{
-	width: 240px;
-	height: 250px;
+	width: 320px;
+	height: 320px;
 	margin:100px auto;
 	background-color: #fff;
 	border:3px solid #ccc;
@@ -15,7 +16,7 @@
 
 #date,#week,#day{
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 
 #previous,#next{
@@ -24,10 +25,11 @@
 	padding: 5px;
 	background-color:#cff;
 	border-radius: 5px;
+	font-size: 18px;
 }
 
 select{
-	width: 60px;
+	width: 80px;
 	height: 30px;
 	margin-left: 3px;
 	margin-right: 3px;
@@ -35,9 +37,14 @@ select{
 }
 
 span{
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: bold;
-	margin-left: 6px;
-    margin-right: 6px;
+	margin-left: 8px;
+    margin-right: 8px;
     text-align: right;
+    cursor: pointer;
+}
+
+.grayColor{
+	color:#ccc;
 }
