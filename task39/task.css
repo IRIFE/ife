@@ -1,0 +1,27 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	height:2000px;
+}
+
+table {
+	border: 1px solid #ccc;
+	font-size: 20px;
+	text-align: center;
+	margin:100px auto;
+	border-collapse: collapse;
+}
+
+th,td{
+    width: 140px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+th{
+	background-color: #000;
+	color: #fff;
+}
