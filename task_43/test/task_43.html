@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>任务四十三：多功能相册之拼图布局</title>
+	<link rel="stylesheet" type="text/css" href="task_43.css">
+	<style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      height: 420px;
+      position: relative;
+    }
+    .box div{
+      width: 600px;
+      height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+	</style>
+</head>
+<body>
+
+  <div class="box">
+    <div style="background-color: #FFA500"></div>
+  </div>
+  <div class="box">
+    <div style="background-color: #FF83FA;clip-path:url(#myClip_2_1)"></div>
+    <div style="background-color: #FA8072;clip-path:url(#myClip_2_2)"></div>
+  </div>
+  <div class="box">
+    <div style="background-color: #9F79EE;clip-path:url(#myClip_3_1)"></div>
+    <div style="background-color: #9AC0CD;clip-path:url(#myClip_3_2)"></div>
+    <div style="background-color: #98FB98;clip-path:url(#myClip_3_3)"></div>
+  </div>
+  <div class="box">
+    <div style="background-color: #8968CD;clip-path:url(#myClip_4_1)"></div>
+    <div style="background-color: #87CEFA;clip-path:url(#myClip_4_2)"></div>
+    <div style="background-color: #8A2BE2;clip-path:url(#myClip_4_3)"></div>
+    <div style="background-color: #7CFC00;clip-path:url(#myClip_4_4)"></div>
+  </div>
+  <div class="box">
+    <div style="background-color: #00C5CD;clip-path:url(#myClip_5_1)"></div>
+    <div style="background-color: #00CD00;clip-path:url(#myClip_5_2)"></div>
+    <div style="background-color: #0000FF;clip-path:url(#myClip_5_3)"></div>
+    <div style="background-color: #00FF7F;clip-path:url(#myClip_5_4)"></div>
+    <div style="background-color: #006400;clip-path:url(#myClip_5_5)"></div>
+   </div>
+  <div class="box">
+    <div style="background-color: #CD9B1D;clip-path:url(#myClip_6_1)"></div>
+    <div style="background-color: #CAFF70;clip-path:url(#myClip_6_2)"></div>
+    <div style="background-color: #CD5555;clip-path:url(#myClip_6_3)"></div>
+    <div style="background-color: #CD0000;clip-path:url(#myClip_6_4)"></div>
+    <div style="background-color: #CDB38B;clip-path:url(#myClip_6_5)"></div>
+    <div style="background-color: #CD69C9;clip-path:url(#myClip_6_6)"></div>
+  </div>
+
+  <svg width="0" height="0">
+    <defs>
+      <clipPath id="myClip_2_1">
+        <polygon points="0 0, 400 0, 200 400, 0 400" />
+      </clipPath>
+      <clipPath id="myClip_2_2">        
+        <polygon points="400 0, 600 0, 600 400, 200 400" />
+      </clipPath>
+      <clipPath id="myClip_3_1">        
+        <polygon points="0 0, 400 0, 400 400, 0 400" />
+      </clipPath>
+      <clipPath id="myClip_3_2">        
+        <polygon points="400 0, 600 0, 600 200, 400 200" />
+      </clipPath>
+      <clipPath id="myClip_3_3">        
+        <polygon points="400 200, 600 200, 600 400, 400 400" />
+      </clipPath>
+      <clipPath id="myClip_4_1">        
+        <polygon points="0 0, 300 0, 300 200, 0 200" />
+      </clipPath>
+      <clipPath id="myClip_4_2">        
+        <polygon points="300 0, 600 0, 600 200, 300 200" />
+      </clipPath>
+      <clipPath id="myClip_4_3">        
+        <polygon points="0 200, 300 200, 300 400, 0 400" />
+      </clipPath>
+      <clipPath id="myClip_4_4">        
+        <polygon points="300 200, 600 200, 600 400, 300 400" />
+      </clipPath>
+      <clipPath id="myClip_5_1">        
+        <polygon points="0 0, 400 0, 400 250, 0 250" />
+      </clipPath>
+      <clipPath id="myClip_5_2">        
+        <polygon points="400 0, 600 0, 600 200, 400 200" />
+      </clipPath>
+      <clipPath id="myClip_5_3">        
+        <polygon points="0 250, 200 250, 200 400, 0 400" />
+      </clipPath>
+      <clipPath id="myClip_5_4">        
+        <polygon points="200 250, 400 250, 400 400, 200 400" />
+      </clipPath>
+      <clipPath id="myClip_5_5">        
+        <polygon points="400 200, 600 200, 600 400, 400 400" />
+      </clipPath>
+      <clipPath id="myClip_6_1">        
+        <polygon points="0 0, 400 0, 400 250, 0 250" />
+      </clipPath>
+      <clipPath id="myClip_6_2">        
+        <polygon points="400 0, 600 0, 600 125, 400 125" />
+      </clipPath>
+      <clipPath id="myClip_6_3">        
+        <polygon points="400 125, 600 125, 600 250, 400 250" />
+      </clipPath>
+      <clipPath id="myClip_6_4">        
+        <polygon points="0 250, 200 250, 200 400, 0 400" />
+      </clipPath>
+      <clipPath id="myClip_6_5">        
+        <polygon points="200 250, 400 250, 400 400, 200 400" />
+      </clipPath>
+      <clipPath id="myClip_6_6">        
+        <polygon points="400 250, 600 250, 600 400, 400 400" />
+      </clipPath>
+    </defs>
+  </svg>
+
+<script type="text/javascript" src="task_43.js"></script>
+</body>
+</html>
