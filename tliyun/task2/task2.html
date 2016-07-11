@@ -186,7 +186,7 @@
 					</form>
 				</div>
 
-				<div class="rightpart" style="font-size: 14px;color: gray;margin-bottom: 15px">邮箱地址请按要求格式输入</div>
+				<div class="rightpart hint">邮箱地址请按要求格式输入</div>
 
 				<div class="leftpart">请输入密码</div>
 
@@ -202,21 +202,21 @@
 					</form>
 				</div>
 
-				<div class="rightpart" style="font-size: 14px;color: gray;margin-bottom: 15px">密码请为6-16位英文数字</div>
+				<div class="rightpart hint">密码请为6-16位英文数字</div>
 
 				<div class="leftpart">性别</div>
 				<div class="rightpart">
 					<form >
-						<input type="radio" name="sex" value="male" id="male" checked="checked" />
+						<input type="radio" name="sex" id="male" checked="checked" />
 						<label for="male">男</label>
-						<input type="radio" name="sex" value="female" id="female" />
+						<input type="radio" name="sex" id="female" />
 						<label for="female">女</label>
 					</form>
 				</div>
 				<div class="leftpart">城市</div>
 				<div class="rightpart">
 					<select name="city">
-						<option value="beijing">北京</option>
+						<option value="beijing" selected="selected">北京</option>
 						<option value="tianjin">天津</option>
 						<option value="shanghai">上海</option>
 						<option value="chongqing">重庆</option>
@@ -235,10 +235,10 @@
 				<div class="rightpart">
 					<textarea style="height: 100px;width: 400px">这是一个多行输入框，输入您的个人描述</textarea>
 				</div>
-				<div style="clear: both;width: 100%;text-align: center;">
-					<input type="submit" value="确认提交" style="width: 100%;height: 35px;background-color: #3A5FCD;border-radius: 10px;font-size: 20px;color: white" />
+				<div class="center">
+					<input type="submit" value="确认提交" id="btn-submit" />
 				</div>			
-				<p style="clear: both;width: 100%;text-align: center;">版权所有©</p>
+				<p class="center">版权所有©</p>
 			</div>
 		</div>
 
