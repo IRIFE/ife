@@ -1,0 +1,21 @@
+#container{
+	text-align: center;
+	width: 80%;
+	margin:0 auto;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+#display{
+	height: 550px;
+	width:95%;
+	padding:20px;
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	align-items: flex-end;
+	justify-content: center; 
+}
+.bar{
+	margin:5px; 
+}

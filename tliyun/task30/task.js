@@ -96,7 +96,7 @@ function prompt(length){
       document.getElementById('hint1').innerHTML="输入格式不正确";
       document.getElementById('hint1').style.color="red";
     }else{
-      document.getElementById('hint1').innerHTML="输入合适正确";
+      document.getElementById('hint1').innerHTML="输入格式正确";
       document.getElementById('hint1').style.color="green";
       flag1=true;
     }

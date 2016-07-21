@@ -6,6 +6,16 @@
 table{
 	border: 1px solid #ccc;
 	text-align: center;
+	border-collapse: collapse;
+}
+
+th,td{
+	border:1px solid #ccc;
+}
+
+th{
+	background-color: #000;
+	color:#fff;
 }
 
 span{
