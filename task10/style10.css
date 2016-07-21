@@ -8,9 +8,10 @@
   padding:40px 20px;
   border: 1px solid black;
   display: flex;
-  /*flex-flow: row wrap;*/
-  justify-content: space-between;
-  align-items: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: space-between;/*两端对齐，项目之间的间隔都相等*/
+  align-items: center;/*交叉轴的中点对齐*/
 }
 div>div{
 	width:150px;
@@ -29,13 +30,13 @@ div>div{
   height: 200px;
   border:1px solid blue;
 }
-@media all and (max-width: 640px) { 
+@media all and (max-width: 640px) { /*在所有媒介下，浏览器宽度小于等于640px的时候使用的样式*/
    #item4 { 
        order: -1;
        margin-bottom: 20px; 
    } 
    #container { 
-       flex-wrap: wrap; 
-       align-items: flex-start; 
+       flex-wrap: wrap; /*换行，第一行在上方*/
+       align-items: flex-start; /*交叉轴的起点对齐*/
    } 
 } 

@@ -11,18 +11,14 @@ body{
 }
 #header{
 	background: black;
-	margin-right: 5px;
     height:50px;
 	width: 100%;
 }
 #headerleft{
-	 margin-left: 0px;
 	 width: 20%;
 	 float: left;
-	 clear: both;
 }
 #headerright{
-	margin-right: 0px;
 	width: 80%;
 	height: 50px;
 	float: right;
@@ -51,9 +47,7 @@ body{
 	border-right: 3px solid gray;
     border-bottom: 3px solid gray;
 }
-#body1{
-	clear: both;
-}
+
 h3{
 	margin-top: 8px;
 }
@@ -72,10 +66,6 @@ h3{
 .text{
 	width: 100%;
 }
-.olist{
-    margin-left: 20px;
-    margin-top:20px;
-}
 .imgborder{
 	float: left;
 	margin-left: 30px;
@@ -84,10 +74,13 @@ h3{
 	border: solid 1px #000;
 	width: auto;
 }
-
 #body3{
 	clear: both;
 	height: 400px;
+}
+.olist{
+    margin-left: 20px;
+    margin-top:20px;
 }
 .imglist{
     
@@ -111,6 +104,7 @@ tr,th,td{
 }
 #body5{
     height: auto;
+	overflow:hidden;
 }
 .leftpart{
     width: 38%;
@@ -128,15 +122,51 @@ tr,th,td{
     margin-bottom: 5px;  
 }
 
+.hint{
+	font-size: 14px;
+	color: gray;
+	margin-bottom: 15px;
+}
+#btn-submit{
+	width: 100%;
+	height: 35px;
+	background-color: #3A5FCD;
+	border-radius: 10px;
+	font-size: 20px;
+	color: white;
+}
+.center{
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+
+#wrapper{
+	clear: both;
+}
+
 #wrapper1{
-    position: absolute;
-    width: 70%;
+	float: left;
+    /*width: 70%;*/
+    margin-right: 400px;
     background: #CFCFCF;
 }
 #wrapper2{
     float: right;
-    width: 30%;
-    margin-left: 20px;
-    clear: both;
+    width: 400px;
+    margin-left: -400px;
     background: #CFCFCF;
+}
+#footer{
+	background: black;
+    height:50px;
+	width: 100%;
+	margin-bottom: 10px;
+	clear: both;
+}
+#owner{
+	height: 50px;
+	text-align: center;
+	color: white;
+	line-height: 50px;
 }

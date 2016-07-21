@@ -7,9 +7,10 @@
 	padding: 10px; 
 }
 #mainbody{
-	height: 680px;
 	background-color:#eee;
-	border: #999 solid 1px; 
+	border: #999 solid 1px;
+	overflow: auto;
+	min-width: 800px;
 }
 .image{
 	width: 80px;
@@ -17,25 +18,21 @@
 	margin: 20px;
 }
 #left{
-	position: absolute;
-	left:20px;
+	float: left;
+	margin-left:20px;
 	border: #999 solid 1px; 
 	margin:20px;
 	width: 200px;
 	background-color:white; 
 }
 #middle{
-	position: absolute;
-	left:240px;
-	right:160px;
-	margin: 20px;
-	width: auto;
+	margin: 20px 160px 20px 240px;
 	border: #999 solid 1px; 
 	background-color:white; 
 }
 #right{
-	position: absolute;
-	right:20px;
+	float:right;
+	margin-right:20px;
 	width: 120px;
 	border: #999 solid 1px; 
 	margin:20px;
